@@ -3,141 +3,114 @@
   <head>
     <title>practice</title>
     <style>
-      .stem {
-        float: left;
-        height: 1000px;
-        width: 1000px;
-        border-right: 10px solid green;
-        border-top-right-radius: 50%;
-        border-bottom-right-radius: 50%;
-        box-sizing: border-box;
+      * {
+        font-family: monospace;
       }
 
-      .leaf {
-        height: 100%;
-        width: 100%;
-        border-top-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-        box-sizing: border-box;
+      .article1 {
+        color: rgba(0, 0, 0, 65%);
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        padding: 100px;
+        margin: 100px 100px;
+        border: 1px solid black;
       }
 
-      #outerleaf {
-        float: left;
-        height: 700px;
-        width: 700px;
-        border: 20px solid rgba(0, 128, 0, 100%);
-        border-top-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-        box-sizing: border-box;
+      .article1 > h1,
+      .article1 > h2,
+      .article1 > h3 {
+        color: rgba(0, 0, 0, 80%);
+      }
+
+      .article2 {
+        background-color: rgba(0, 0, 0, 100%);
+        color: rgba(255, 255, 255, 100%);
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+        padding: 100px;
+        margin: 100px 100px;
+        border: 1px solid rgba(0, 0, 0, 100%);
+      }
+
+      .strong1 {
+        padding: 1px;
+        background-color: rgba(0, 0, 0, 80%);
+        color: white;
+      }
+
+      .strong2 {
+        padding: 1px;
+        background-color: rgba(255, 255, 255, 100%);
+        color: rgba(0, 0, 0, 100%);
       }
     </style>
   </head>
   <body>
-    <div class="stem">
-      <div class="stem">
-        <div class="stem">
-          <div class="stem">
-            <div class="stem">
-              <div class="stem">
-                <div class="stem">
-                  <div class="stem">
-                    <div class="stem">
-                      <div class="stem">
-                        <div class="stem"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="leaf" id="outerleaf">
-      <div class="leaf" style="border: 20px solid rgba(0, 128, 0, 100%)">
-        <div class="leaf" style="border: 20px solid rgba(0, 128, 0, 95%)">
-          <div class="leaf" style="border: 20px solid rgba(0, 128, 0, 90%)">
-            <div class="leaf" style="border: 20px solid rgba(0, 128, 0, 85%)">
-              <div
-                class="leaf"
-                style="border: 20px solid rgba(0, 128, 0, 80%)"
-              >
-                <div
-                  class="leaf"
-                  style="border: 20px solid rgba(0, 128, 0, 75%)"
-                >
-                  <div
-                    class="leaf"
-                    style="border: 20px solid rgba(0, 128, 0, 70%)"
-                  >
-                    <div
-                      class="leaf"
-                      style="border: 20px solid rgba(0, 128, 0, 65%)"
-                    >
-                      <div
-                        class="leaf"
-                        style="border: 20px solid rgba(0, 128, 0, 60%)"
-                      >
-                        <div
-                          class="leaf"
-                          style="border: 20px solid rgba(0, 128, 0, 55%)"
-                        >
-                          <div
-                            class="leaf"
-                            style="border: 20px solid rgba(0, 128, 0, 50%)"
-                          >
-                            <div
-                              class="leaf"
-                              style="border: 20px solid rgba(0, 128, 0, 45%)"
-                            >
-                              <div
-                                class="leaf"
-                                style="border: 20px solid rgba(0, 128, 0, 40%)"
-                              >
-                                <div
-                                  class="leaf"
-                                  style="
-                                    border: 20px solid rgba(0, 128, 0, 35%);
-                                  "
-                                >
-                                  <div
-                                    class="leaf"
-                                    style="
-                                      border: 20px solid rgba(0, 128, 0, 30%);
-                                    "
-                                  >
-                                    <div
-                                      class="leaf"
-                                      style="
-                                        border: 20px solid rgba(0, 128, 0, 25%);
-                                      "
-                                    >
-                                      <div
-                                        class="leaf"
-                                        style="
-                                          border: 20px solid
-                                            rgba(0, 128, 0, 20%);
-                                        "
-                                      >
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <article class="article1">
+      <h1>Main Heading</h1>
+      <p>
+        This is a simple paragraph showcasing
+        <strong class="strong1">typography</strong>. A good font choice improves
+        readability and user experience.
+      </p>
+      <h2>Subheading</h2>
+      <p>
+        Typography plays a crucial role in web design. Choosing the right font,
+        size, and spacing ensures better accessibility.
+      </p>
+      <h3>Another subheading</h3>
+      <p>
+        Line height and contrast are just as impotant as the font itself. Dark
+        text on the background improves legibility.
+      </p>
+      <h3>Just some arbitary text</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+        perferendis ullam eos, eligendi deserunt saepe consectetur atque vel
+        fugiat animi eaque sequi nulla ex totam sed iure, magni sunt, ducimus ad
+        voluptatem impedit itaque rerum! Repellendus tempora quaerat provident
+        iusto consectetur dignissimos illo doloribus deserunt quibusdam illum
+        delectus laboriosam aut, obcaecati debitis quae, aspernatur officia amet
+        assumenda blanditiis et eius officiis voluptate? Officiis culpa, modi
+        unde aliquam tempore commodi ullam necessitatibus ducimus corporis
+        nesciunt nam distinctio, quidem iure atque accusamus a fuga nobis
+        repellat quis doloribus amet fugiat? In, modi. Cum quisquam, distinctio
+        alias nam harum ipsum omnis facere. Facilis.
+      </p>
+    </article>
+    <article class="article2">
+      <h1>Main Heading</h1>
+      <p>
+        This is a simple paragraph showcasing
+        <strong class="strong2">typography</strong>. A good font choice improves
+        readability and user experience.
+      </p>
+      <h2>Subheading</h2>
+      <p>
+        Typography plays a crucial role in web design. Choosing the right font,
+        size, and spacing ensures better accessibility.
+      </p>
+      <h3>Another subheading</h3>
+      <p>
+        Line height and contrast are just as impotant as the font itself. Dark
+        text on the background improves legibility.
+      </p>
+      <h3>Just some arbitary text</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+        perferendis ullam eos, eligendi deserunt saepe consectetur atque vel
+        fugiat animi eaque sequi nulla ex totam sed iure, magni sunt, ducimus ad
+        voluptatem impedit itaque rerum! Repellendus tempora quaerat provident
+        iusto consectetur dignissimos illo doloribus deserunt quibusdam illum
+        delectus laboriosam aut, obcaecati debitis quae, aspernatur officia amet
+        assumenda blanditiis et eius officiis voluptate? Officiis culpa, modi
+        unde aliquam tempore commodi ullam necessitatibus ducimus corporis
+        nesciunt nam distinctio, quidem iure atque accusamus a fuga nobis
+        repellat quis doloribus amet fugiat? In, modi. Cum quisquam, distinctio
+        alias nam harum ipsum omnis facere. Facilis.
+      </p>
+    </article>
   </body>
 </html>
