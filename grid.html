@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>grid</title>
+    <style>
+      * {
+        padding: 0%;
+        margin: 0%;
+      }
+
+      body {
+        width: 100%;
+        aspect-ratio: 1;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: "header header header" "nav main aside"
+          "footer footer footer";
+      }
+
+      header {
+        font-size: 100px;
+        background-color: tomato;
+        grid-area: header;
+      }
+
+      main {
+        background-color: aqua;
+        grid-area: main;
+      }
+
+      nav {
+        background-color: beige;
+        grid-area: nav;
+      }
+
+      aside {
+        background-color: skyblue;
+        grid-area: aside;
+      }
+
+      footer {
+        background-color: yellow;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>LOGO</div>
+      <div>HEADER</div>
+      <div>MENU</div>
+    </header>
+    <main>Main</main>
+    <nav>Nav</nav>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+  </body>
+</html>

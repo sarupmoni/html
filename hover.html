@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Animation</title>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
+    }
+
+    .board {
+      margin-top: 5%;
+      justify-content: center;
+      display: flex;
+    }
+
+    .box {
+      width: 100px;
+      aspect-ratio: 1;
+      border: 1px solid black;
+    }
+
+    .row:nth-child(2n) > .box:nth-child(2n),
+    .row:nth-child(2n-1) > .box:nth-child(2n-1){
+      background-color: rgba(0, 255, 255);
+    }
+
+    .row:nth-child(2n) > .box:nth-child(2n):hover,
+    .row:nth-child(2n-1) > .box:nth-child(2n-1):hover {
+      background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4a/100x100_logo.png);
+      background-size: cover;
+    }
+    
+    .box:hover {
+      background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/4a/100x100_logo.png);
+      background-size: contain;
+    }
+  </style>
+</head>
+<body>
+    <div class="board">
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+</body>
+</html>

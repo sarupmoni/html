@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>practice</title>
   </head>
-  <body style="background-color: rgb(31 154 252 / 19%);">
-    <div style="text-align: center;">
-    <span style="font-size: 1500%;color: blue;">G</span>
-    <span style="font-size: 1000%;color: red;">o</span>
-    <span style="font-size: 1000%;color: rgb(252, 215, 5);">o</span>
-    <span style="font-size: 1000%;color: blue;">g</span>
-    <span style="font-size: 1000%;color: greenyellow;">l</span>
-    <span style="font-size: 1000%;color: red;">e</span>
-  </div>
+  <body>
+    <div class="google" style="text-align: center">
+      <span style="font-size: 1500%; color: blue">G</span>
+      <span style="font-size: 1000%; color: red">o</span>
+      <span style="font-size: 1000%; color: rgb(252, 215, 5)">o</span>
+      <span style="font-size: 1000%; color: greenyellow">l</span>
+      <span style="font-size: 1000%; color: blue">g</span>
+      <span style="font-size: 1000%; color: red">e</span>
+    </div>
     <div
       style="
         text-align: center;
@@ -58,5 +58,32 @@
       <span style="font-size: 1000%; color: greenyellow">a</span>
       <span style="font-size: 1000%; color: greenyellow">&nbsp;</span>
     </div>
+
+    <p>this is cool</p>
+
+    <script>
+      const colors = [
+        "orange",
+        "brown",
+        "indigo",
+        "green",
+        "red",
+        "black",
+        "yellow",
+      ];
+      let index = 0;
+      let colorIndex = 0;
+      const elements = document.querySelectorAll("span");
+
+      setInterval(() => {
+        index = (index + 1) % 6;
+        elements[index].style.color = colors[colorIndex];
+
+        if (colorIndex > colors.length) {
+          colorIndex = 0;
+        }
+        colorIndex++;
+      }, 100);
+    </script>
   </body>
 </html>

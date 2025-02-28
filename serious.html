@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="google" style="text-align: center">
+      <span style="font-size: 1500%; color: blue">G</span>
+      <span style="font-size: 1000%; color: red">o</span>
+      <span style="font-size: 1000%; color: rgb(252, 215, 5)">o</span>
+      <span style="font-size: 1000%; color: blue">g</span>
+      <span style="font-size: 1000%; color: greenyellow">l</span>
+      <span style="font-size: 1000%; color: red">e</span>
+    </div>
+    <script>
+      const elements = document.querySelectorAll("span");
+      const contents = [...elements].map((element) => element.textContent);
+      let count = 0;
+      const a = setInterval(() => {
+        contents.sort(() => Math.random() - 0.5);
+        count++;
+        if (contents.join("") === "Google") {
+          console.log(count);
+          clearInterval(a);
+        }
+        contents.forEach((char, index) => {
+          elements[index].textContent = char;
+        });
+      }, 100);
+    </script>
+  </body>
+</html>
