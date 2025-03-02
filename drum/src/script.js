@@ -80,35 +80,15 @@ const createElement = (tagName, className, position, drumData) => {
   location.appendChild(newDiv);
 };
 
-const setupDrumKit = () => {
-  createElement("div", "drumPad", "body");
-  const drumObjects = Object.entries(drumKitConfigs());
-
-  for (const drumData of drumObjects) {
-    createElement("div", "drum", ".drumPad", drumData);
-  }
-
-  setupEventListeners(drumObjects);
+const playDrumSound = (drum, drumId) => {
+  const audio = document.getElementById(drumId);
+  audio.currentTime = 0;
+  audio.play();
+  drum.classList.add("change");
 };
 
-const setupEventListeners = (drumObject) => {
-  const { handleKeyPress, handleKeyRelease } = createKeyHandlers(drumObject);
-
-  document.addEventListener("keydown", handleKeyPress);
-  document.addEventListener("keyup", handleKeyRelease);
-};
-
-const createKeyHandlers = (drumObject) => {
-  const handleKeyPress = (event) => onKeyPress(event, drumObject);
-  const handleKeyRelease = (event) => onKeyRelease(event, drumObject);
-
-  return { handleKeyPress, handleKeyRelease };
-};
-
-const onKeyPress = (keyEvent, drumObject) => {
-  const { drum, drumData } = findDrumByKey(drumObject, keyEvent);
-
-  playDrumSound(drum, drumData[0]);
+const resetAnimation = (drum) => {
+  drum.classList.remove("change");
 };
 
 const findDrumByKey = (drumObject, keyEvent) => {
@@ -120,21 +100,49 @@ const findDrumByKey = (drumObject, keyEvent) => {
   return { drum, drumData };
 };
 
-const playDrumSound = (drum, drumId) => {
-  const audio = document.getElementById(drumId);
-  audio.currentTime = 0;
-  audio.play();
-  drum.classList.add("change");
-};
-
 const onKeyRelease = (keyEvent, drumObject) => {
   const { drum } = findDrumByKey(drumObject, keyEvent);
 
   resetAnimation(drum);
 };
 
-const resetAnimation = (drum) => {
-  drum.classList.remove("change");
+const onKeyPress = (keyEvent, drumObject) => {
+  const { drum, drumData } = findDrumByKey(drumObject, keyEvent);
+
+  playDrumSound(drum, drumData[0]);
+};
+
+const createKeyHandlers = (drumObject) => {
+  const handleKeyPress = (event) => onKeyPress(event, drumObject);
+  const handleKeyRelease = (event) => onKeyRelease(event, drumObject);
+
+  return { handleKeyPress, handleKeyRelease };
+};
+
+const setupEventListeners = (drumObject) => {
+  const { handleKeyPress, handleKeyRelease } = createKeyHandlers(drumObject);
+
+  document.addEventListener("keydown", handleKeyPress);
+  document.addEventListener("keyup", handleKeyRelease);
+};
+
+const createHeading = () => {
+  const heading = document.createElement("h1");
+  heading.textContent = "MyOnline DrumPad";
+
+  document.body.appendChild(heading);
+};
+
+const setupDrumKit = () => {
+  createHeading();
+  createElement("div", "drumPad", "body");
+  const drumObjects = Object.entries(drumKitConfigs());
+
+  for (const drumData of drumObjects) {
+    createElement("div", "drum", ".drumPad", drumData);
+  }
+
+  setupEventListeners(drumObjects);
 };
 
 const main = () => {
