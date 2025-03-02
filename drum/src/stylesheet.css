@@ -1,0 +1,40 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  width: 100vw;
+  height: 90vh;
+}
+
+.drumPad {
+  background-color: rgba(255, 192, 203, 0.424);
+  margin: 100px auto;
+  width: 50%;
+  height: 80%;
+  border: 2px solid pink;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.drum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background-color: pink;
+  text-align: center;
+}
+
+.change {
+  width: 95%;
+  height: 95%;
+}
