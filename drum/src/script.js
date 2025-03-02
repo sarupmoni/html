@@ -32,7 +32,7 @@ function objectInnerTexts() {
     tom4: "g",
     snaredrum2: "l",
     kick1: "h",
-    bass: " ",
+    bass: "k",
     kick2: "j",
   };
 }
@@ -82,10 +82,6 @@ const createAndAppendElement = () => {
 
   for (const idAndSrc of idNameAndSrcs) {
     createAudio(idAndSrc);
-  }
-
-  for (const idAndSrc of idNameAndSrcs) {
-    console.log(document.getElementById(idAndSrc[0]));
   }
 
   initialize();
@@ -158,7 +154,7 @@ function playDrum(event, audio, drum) {
     case "h":
       playAudio(audio, drum, "kick1", 15);
       break;
-    case " ":
+    case "k":
       playAudio(audio, drum, "bass", 16);
       break;
     case "j":
@@ -225,7 +221,7 @@ function resetDrumAnimation(event, drum) {
     case "h":
       resetAnimation(drum, 15);
       break;
-    case " ":
+    case "k":
       resetAnimation(drum, 16);
       break;
     case "j":
