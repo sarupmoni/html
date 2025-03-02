@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script practice</title>
+    <style>
+      /* div {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+      }
+
+      img {
+        width: 200px;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>Html Script practice</h1>
+    <div><img src="https://picsum.photos/200" alt="" /></div>
+
+    <button>Change Image</button>
+  </body>
+  <script>
+    //   const images = [
+    //     "https://picsum.photos/200",
+    //     "https://preview.redd.it/xykxabcertq21.gif?format=png8&s=c33bbe4cdbccaf7ba8e8835cf71112eb89ea9245",
+    //     "https://i.redd.it/kxov0rcoi4p21.png",
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShZCf1KolAHSGp8SxwYOI2ak8hf01cOzki8GOyNeIypU5W6xGreJXVCwtYqJcZK1w2eJM&usqp=CAU",
+    // ];
+
+    //   let index = 0;
+    //   function changeImage() {
+    //     let x = document.querySelector("img");
+    //     x.src = images[index];
+    //     console.log(x);
+    //     index = (index + 1) % images.length;
+
+    //   const btn = document.querySelector("button");
+    //   // btn.addEventListener("click", changeImage);
+    //   btn.onclick = changeImag
+    //   // setInterval(changeImage, 1000);
+
+
+      const createDiv = (className, position) => {
+        const newDiv = document.createElement("div");
+        newDiv.setAttribute("class", className);
+        newDiv.textContent = "hello this is added dynamically"
+        document[position].appendChild(newDiv);
+      };
+
+      const createAndAppendElement = () => {
+        createDiv("drumPad", "body");
+      };
+
+      createAndAppendElement();
+  </script>
+</html>
