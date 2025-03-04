@@ -4,183 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insta</title>
-    <style>
-      * {
-        padding: 0%;
-        margin: 0%;
-        box-sizing: border-box;
-      }
-
-      .view {
-        margin: 1% auto;
-        width: 600px;
-        height: 1000px;
-        position: relative;
-        border: 1px solid black;
-      }
-
-      .mainview {
-        width: 100%;
-        height: 90%;
-        overflow: scroll;
-      }
-
-      .mainview > header {
-        width: 100%;
-        height: 300px;
-        border: 1px solid black;
-      }
-
-      nav {
-        width: 95%;
-        height: 40%;
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "logo logo . notification message";
-      }
-
-      .logo {
-        font-size: 3em;
-        grid-area: logo;
-      }
-
-      .notification {
-        grid-area: notification;
-      }
-
-      .message {
-        grid-area: message;
-      }
-
-      .notification > img,
-      .message > img {
-        width: 3em;
-      }
-
-      .statuscontainer {
-        overflow-x: scroll;
-        height: 60%;
-      }
-
-      .statuscontainer > ul {
-        width: 1500px;
-        height: 100%;
-        display: flex;
-        list-style-type: none;
-      }
-
-      .status {
-        width: 30%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .status > figure {
-        width: 90%;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        border: 1px solid black;
-      }
-
-      .mainview > main {
-        width: 100%;
-        height: 100%;
-      }
-
-      .mainview > main > ul {
-        list-style-type: none;
-      }
-
-      .view > footer {
-        width: 100%;
-        height: 10%;
-        position: sticky;
-        bottom: 0;
-        background-color: black;
-      }
-
-      .view > footer > ul {
-        list-style-type: none;
-      }
-
-      article {
-        width: 600px;
-        height: 600px;
-        border: 1px solid black;
-      }
-
-      article > header {
-        width: 100%;
-        height: 10%;
-        /* border: 1px solid black; */
-
-        & > ul {
-          height: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-        }
-      }
-
-      article > main {
-        margin: 0% auto;
-        width: 70%;
-        aspect-ratio: 1;
-        border: 1px solid black;
-      }
-
-      .action {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas: "like comment share . . save";
-        justify-items: center;
-      }
-
-      .like {
-        grid-area: like;
-
-        & > img {
-          width: 2em;
-        }
-      }
-
-      .comment {
-        grid-area: comment;
-
-        & > img {
-          width: 2em;
-        }
-      }
-
-      .share {
-        grid-area: share;
-      }
-
-      .save {
-        grid-area: save;
-
-        & > img {
-          width: 2em;
-        }
-      }
-
-      article > footer {
-        margin: 15px;
-        height: 15%;
-
-        & > p {
-          height: 50%;
-          margin: 2px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <section class="view">
@@ -295,7 +119,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -339,7 +168,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -383,7 +217,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -427,7 +266,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -471,7 +315,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -515,7 +364,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -559,7 +413,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -603,7 +462,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -647,7 +511,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
@@ -691,7 +560,12 @@
                     </div>
                     <div class="share">
                       <svg width="32" height="32" viewBox="-100 -100 200 200">
-                        <path d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100" fill="none" stroke="black" stroke-width="8"/>
+                        <path
+                          d="M 0 0 L 100 -100 L -100 0 L 0 0 L 0 100 L 100 -100"
+                          fill="none"
+                          stroke="black"
+                          stroke-width="8"
+                        />
                       </svg>
                     </div>
                     <div class="save">
