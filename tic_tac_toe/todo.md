@@ -1,0 +1,5 @@
+- [x] - create structure
+- [X] - create divs inside structure, give them class name box and ids.
+- [X] - have a controller that call all the methods
+- [X] - make a model- game object which contain all the methods.
+- [X] - accept players names and make object with it
