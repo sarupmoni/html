@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0%;
+        margin: 0%;
+      }
+
+      header {
+        width: 600px;
+        height: 300px;
+        border: 1px solid black;
+        margin: 15% auto;
+      }
+
+      nav {
+        width: 95%;
+        height: 40%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo logo . like message";
+      }
+
+      .logo {
+        font-size: 3em;
+        grid-area: logo;
+      }
+
+      .like {
+        grid-area: like;
+      }
+
+      .message {
+        grid-area: message;
+      }
+
+      .like > img,
+      .message > img {
+        width: 3em;
+      }
+
+      .statuscontainer {
+        overflow-x: scroll;
+        height: 60%;
+      }
+
+      ul {
+        width: 1500px;
+        height: 100%;
+        display: flex;
+        list-style-type: none;
+      }
+
+      .status {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      figure {
+        width: 90%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Instagram</div>
+        <div class="like">
+          <img
+            src=""
+            alt="likes"
+          />
+        </div>
+        <div class="message">
+          <img
+            src=""
+            alt="messenger"
+          />
+        </div>
+      </nav>
+
+      <div class="statuscontainer">
+        <ul>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+          <li class="status">
+            <figure>
+              <img src="" alt="" />
+            </figure>
+            figure
+          </li>
+        </ul>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insta demo</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        border-collapse: collapse;
+      }
+
+      .mainFrame {
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid black;
+        overflow: scroll;
+      }
+
+      .innerFrame {
+        width: 200vw;
+        height: 100%;
+        display: flex;
+      }
+
+      .postsContainer,
+      .chatBox {
+        width: 50%;
+        height: 100%;
+        border: 1px solid black;
+      }
+
+      .contentBox {
+        width: 100%;
+        height: 100%;
+        border: 1px solid red;
+      }
+
+      .postBoxHeader {
+        width: 100%;
+        height: 30%;
+        border-bottom: 1px solid black;
+      }
+
+      .postBoxMain {
+        width: 100%;
+        height: 60%;
+        border-bottom: 1px solid black;
+        overflow-y: scroll;
+      }
+
+      .postBoxFooter {
+        width: 100%;
+        height: 10%;
+      }
+
+      .contentHeader,
+      .contentFooter {
+        width: 100%;
+        height: 20%;
+
+        & > div {
+          width: 100%;
+          height: 50%;
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          grid-template-rows: repeat(1, 1fr);
+          justify-items: center;
+          align-items: center;
+          grid-template-areas: "like comment share . . . save";
+
+          & > img {
+            width: 50px;
+            padding: 10px;
+          }
+
+          & > .like {
+            grid-area: like;
+          }
+          & > .comment {
+            grid-area: comment;
+          }
+          & > .share {
+            grid-area: share;
+          }
+          & > .save {
+            grid-area: save;
+          }
+        }
+
+        & > p {
+          width: 100%;
+          height: 50%;
+          grid-area: p;
+          padding: 0px 20px;
+        }
+      }
+
+      .contentMain {
+        width: 100%;
+        height: 60%;
+        border-top: 1px solid red;
+        border-bottom: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="mainFrame">
+      <div class="innerFrame">
+        <div class="postsContainer"></div>
+        <div class="chatBox"></div>
+      </div>
+    </div> -->
+  </body>
+  <script>
+    const createElement = (tag, className, position, idName, content) => {
+      const location = document.querySelector(position);
+      const newElement = document.createElement(tag);
+      newElement.setAttribute("class", className);
+      newElement.setAttribute("id", idName);
+      newElement.textContent = content;
+      location.appendChild(newElement);
+    };
+
+    const createMainStructure = () => {
+      createElement("div", "mainFrame", "body");
+      createElement("div", "innerFrame", ".mainFrame");
+      createElement("div", "postsContainer", ".innerFrame");
+      createElement("div", "chatBox", ".innerFrame");
+    };
+
+    const createPostBoxStructure = () => {
+      createElement("header", "postBoxHeader", ".postsContainer");
+      createElement("main", "postBoxMain", ".postsContainer");
+      createElement("footer", "postBoxFooter", ".postsContainer");
+    };
+
+    const appendImage = (id, imagePath, className) => {
+      const position = document.getElementById(id);
+      const img = document.createElement("img");
+      img.setAttribute("class", className);
+      img.setAttribute("src", imagePath);
+      position.appendChild(img);
+    };
+
+    const appendFooterContent = (i) => {
+      createElement("div", `imageDiv`, `#contentFooter${i}`, `imageDiv${i}`);
+      appendImage(`imageDiv${i}`, "../assets/png/heart.png", "like");
+      appendImage(`imageDiv${i}`, "../assets/png/comment.png", "comment");
+      appendImage(`imageDiv${i}`, "../assets/png/Send-PNG-Picture.png", "share");
+      appendImage(`imageDiv${i}`, "../assets/png/save.jpg", "save");
+      createElement(
+        "p",
+        "para",
+        `#contentFooter${i}`,
+        "",
+        "This are the comments commented by friends"
+      );
+    };
+
+    const createFooterContent = (i) => {
+      createElement("div", "contentBox", ".postBoxMain", `contentBox${i}`);
+      createElement(
+        "header",
+        "contentHeader",
+        `#contentBox${i}`,
+        `contentHeader${i}`
+      );
+      createElement(
+        "main",
+        "contentMain",
+        `#contentBox${i}`,
+        `contentMain${i}`
+      );
+      createElement(
+        "footer",
+        "contentFooter",
+        `#contentBox${i}`,
+        `contentFooter${i}`
+      );
+      appendFooterContent(i);
+    };
+
+    const main = () => {
+      createMainStructure();
+      createPostBoxStructure();
+      for (let i = 0; i < 3; i++) {
+        createFooterContent(i);
+      }
+    };
+
+    main();
+  </script>
+</html>

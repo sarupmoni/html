@@ -36,7 +36,7 @@ nav {
 }
 
 .logo {
-  font-size: 3em;
+  font-size: 1em;
   grid-area: logo;
 }
 
@@ -154,6 +154,10 @@ article > main {
 
 .share {
   grid-area: share;
+
+  & > img {
+    width: 2em;
+  }
 }
 
 .save {
