@@ -7,5 +7,6 @@
 - [x] - add controller
 - [x] - switchPlayer method switch the player
 - [x] - addMoves method adds moves
-- [X] - fix player selection
-- [X] - player should switch for valid move(if the move was not played earlier)
+- [x] - fix player selection
+- [x] - player should switch for valid move(if the move was not played earlier)
+- [x] - add symbols for players

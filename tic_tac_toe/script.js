@@ -17,6 +17,7 @@ class Game {
   #players;
   #playersDetails;
   #currentPlayer;
+  #symbols;
   constructor(player1, player2) {
     this.#players = [player1, player2];
     this.#playersDetails = {};
@@ -25,9 +26,11 @@ class Game {
   }
 
   createObject() {
-    this.#players.forEach((player) => {
+    this.#symbols = ["X", "O"];
+    this.#players.forEach((player, index) => {
       this.#playersDetails[player] = {
         moves: new Set(),
+        symbol: this.#symbols[index],
       };
     });
   }
@@ -59,8 +62,6 @@ class Game {
 const controller = (event, game) => {
   const id = event.target.id;
   game.addMove(id);
-  // game.switchPlayer();
-  console.log(id);
 };
 
 const main = () => {
