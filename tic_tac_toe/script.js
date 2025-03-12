@@ -16,11 +16,12 @@ const createStructure = () => {
 class Game {
   #players;
   #playersDetails;
+  #currentPlayer;
   constructor(player1, player2) {
     this.#players = [player1, player2];
     this.#playersDetails = {};
     this.createObject();
-    console.log("players", this.#playersDetails);
+    this.#currentPlayer = this.#players[0];
   }
 
   createObject() {
@@ -30,13 +31,36 @@ class Game {
       };
     });
   }
+
+  switchPlayer() {
+    this.#currentPlayer =
+      this.#currentPlayer === this.#players[0]
+        ? this.#players[1]
+        : this.#players[0];
+  }
+
+  addMove(cellNumber) {
+    console.log(this.#currentPlayer);
+    this.#playersDetails[this.#currentPlayer].moves.add(cellNumber);
+    console.log(this.#playersDetails[this.#currentPlayer]);
+  }
 }
+
+const controller = (event, game) => {
+  const id = event.target.id;
+  game.addMove(id);
+  game.switchPlayer();
+  console.log(id);
+};
 
 const main = () => {
   createStructure();
   const player1 = prompt("Enter 1st player's Name");
   const player2 = prompt("Enter 2st player's Name");
   const game = new Game(player1, player2);
+  document.addEventListener("click", (event) => {
+    controller(event, game);
+  });
 };
 
 window.onload = main;

@@ -1,5 +1,11 @@
 - [x] - create structure
-- [X] - create divs inside structure, give them class name box and ids.
-- [X] - have a controller that call all the methods
-- [X] - make a model- game object which contain all the methods.
-- [X] - accept players names and make object with it
+- [x] - create divs inside structure, give them class name box and ids.
+- [x] - have a controller that call all the methods
+- [x] - make a model- game object which contain all the methods.
+- [x] - accept players names and make object with it
+- [x] - add event listener
+- [x] - add controller
+- [x] - switchPlayer method switch the player
+- [x] - addMoves method adds moves
+- [] - fix player selection
+- [] - player should switch for valid move(if the move was not played earlier)
