@@ -40,16 +40,26 @@ class Game {
   }
 
   addMove(cellNumber) {
-    console.log(this.#currentPlayer);
-    this.#playersDetails[this.#currentPlayer].moves.add(cellNumber);
-    console.log(this.#playersDetails[this.#currentPlayer]);
+    if (!this.hasCellNumber(cellNumber)) {
+      this.#playersDetails[this.#currentPlayer].moves.add(cellNumber);
+      console.log(this.#currentPlayer);
+      console.log(this.#playersDetails[this.#currentPlayer]);
+      this.switchPlayer();
+    }
+  }
+
+  hasCellNumber(cellNumber) {
+    return (
+      this.#playersDetails[this.#players[0]].moves.has(cellNumber) ||
+      this.#playersDetails[this.#players[1]].moves.has(cellNumber)
+    );
   }
 }
 
 const controller = (event, game) => {
   const id = event.target.id;
   game.addMove(id);
-  game.switchPlayer();
+  // game.switchPlayer();
   console.log(id);
 };
 
